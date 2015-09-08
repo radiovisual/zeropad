@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/radiovisual/zeropad/issues"
   },
-  "homepage": "https://github.com/radiovisual/zeropad#readme"
+  "homepage": "https://github.com/radiovisual/zeropad#readme",
+  "devDependencies": {
+    "mocha": "^2.3.2"
+  }
 }
