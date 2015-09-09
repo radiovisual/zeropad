@@ -1,24 +1,30 @@
 'use strict';
 
-module.exports = function(num, length){
+module.exports = function(number, length){
 
-    num = parseFloat(num);
+    number = parseFloat(number);
 
-    if ( isNaN(num) || isNaN(length)) {
-        throw new SyntaxError('zeropad parameters must be : <string|number>, <number>');
+    if ( isNaN(number)) {
+        throw new SyntaxError('Please supply a valid number to pad');
     }
 
-    if (num > length) {
-        return num;
+    if (length !== undefined && isNaN(length)){
+        throw new SyntaxError('Invalid length parameter.');
+    } else if (!length){
+        length = 2;
+    }
 
-    } else if ( num === 0 )  {
+    if (number > length) {
+        return number;
+
+    } else if ( number === 0 )  {
         return new Array(length+1).join('0');
 
     } else {
 
-        var l = (length - String(num).length) + 1;
+        var l = (length - String(number).length) + 1;
         var pad = new Array(l).join('0');
-        return pad+num;
+        return pad+number;
 
     }
 
