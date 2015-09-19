@@ -2,7 +2,7 @@
 
 > Zeropad your positive integers with n-length padding.
 
-*For super-basic number padding (no length options), see [zeropad-simple](https://github.com/radiovisual/simple-zeropad).*
+*For super-basic number padding (no length options), see [simple-zeropad](https://github.com/radiovisual/simple-zeropad).*
 
 ## Install
 
