@@ -30,20 +30,20 @@ zeropad(9, 4);
 
 ## API
 
-###zeropad(number, length)
+###zeropad(number, [length])
 
 
 ### number 
 
 *Required*
 
-Type: `number|string`
+Type: `Number|String`
 
 The number you want to pad.
 
 ### length
 
-Type: `number`
+Type: `Number`
 
 Default: `2`
 
