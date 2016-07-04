@@ -10,19 +10,12 @@ module.exports = function(number, length) {
         throw new SyntaxError('zeropad requires a positive integer for length');
     }
 
-    var isNegative = isNegativeZero(number) || number < 0;
-
-    function value(num) {
-        if (isNegative) {
-            return '-' + num;
-        }
-        return num;
-    }
+    var prefix = isNegativeZero(number) || number < 0 ? '-' : '';
 
     length = length || 2;
     number = Math.abs(parseFloat(number));
     var padLength = (length - String(number).length) + 1;
 
     var pads = new Array(padLength).join('0');
-    return value(pads + number);
+    return prefix + pads + number;
 };
