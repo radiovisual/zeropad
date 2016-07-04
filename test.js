@@ -28,12 +28,6 @@ describe('zeropad', function(){
         done();
     });
 
-    it('should allow you to omit the length parameter', function(){
-        assert.equal(zp(9), '09');
-        assert.equal(zp(100), '100');
-        assert.equal(zp(0), '00');
-    });
-
     it('throws when num is NaN', function(){
         assert.throws(function(){
             zp({}, 1);
@@ -54,6 +48,7 @@ describe('zeropad', function(){
 
     it('length is optional', function(){
         assert.equal(zp(9), '09');
+        assert.equal(zp(100), '100');
         assert.equal(zp(0), '00');
     });
 
