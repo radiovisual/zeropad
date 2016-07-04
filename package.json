@@ -1,33 +1,47 @@
 {
   "name": "zeropad",
-  "version": "1.0.4",
-  "description": "Zeropad your positive integers with n-length padding.",
-  "main": "index.js",
+  "version": "1.1.0",
+  "license": "MIT",
+  "description": "Zeropad your integers with optional n-length padding.",
+  "author": {
+    "name": "Michael Wuergler",
+    "email": "senjudev@gmail.com",
+    "url": "numetriclabs.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "scripts": {
     "test": "mocha"
   },
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/radiovisual/zeropad.git"
   },
   "keywords": [
-    "zero",
-    "pad",
-    "fill",
     "zeropad",
-    "string.",
-    "number",
+    "string",
     "padding",
+    "values",
+    "number",
+    "integer",
+    "negative",
     "positive",
-    "integer"
+    "fill",
+    "pad",
+    "zero"
   ],
-  "author": "Michael Wuergler <senjudev@gmail.com> (http://numetriclabs.com)",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/radiovisual/zeropad/issues"
   },
   "homepage": "https://github.com/radiovisual/zeropad#readme",
   "devDependencies": {
     "mocha": "^2.3.2"
+  },
+  "dependencies": {
+    "negative-zero": "^1.0.0"
   }
 }

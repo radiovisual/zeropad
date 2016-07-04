@@ -1,31 +1,28 @@
 'use strict';
+var isNegativeZero = require('negative-zero');
 
-module.exports = function(number, length){
-
-    number = parseFloat(number);
-
-    if ( isNaN(number)) {
-        throw new SyntaxError('Please supply a valid number to pad');
+module.exports = function(number, length) {
+    if (isNaN(number)) {
+        throw new SyntaxError('zeropad requires a number or string');
     }
 
-    if (length !== undefined && isNaN(length)){
-        throw new SyntaxError('Invalid length parameter.');
-    } else if (!length){
-        length = 2;
+    if (typeof length !== 'undefined' && (isNaN(length) || length < 0)) {
+        throw new SyntaxError('zeropad requires a positive integer for length');
     }
 
-    if (number > length) {
-        return number;
+    var isNegative = isNegativeZero(number) || number < 0;
 
-    } else if ( number === 0 )  {
-        return new Array(length+1).join('0');
-
-    } else {
-
-        var l = (length - String(number).length) + 1;
-        var pad = new Array(l).join('0');
-        return pad+number;
-
+    function value(num) {
+        if (isNegative) {
+            return '-' + num;
+        }
+        return num;
     }
 
+    length = length || 2;
+    number = Math.abs(parseFloat(number));
+    var padLength = (length - String(number).length) + 1;
+
+    var pads = new Array(padLength).join('0');
+    return value(pads + number);
 };
