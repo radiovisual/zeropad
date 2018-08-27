@@ -31,19 +31,19 @@ describe('zeropad', function(){
     it('throws when num is NaN', function(){
         assert.throws(function(){
             zp({}, 1);
-        }, 'zeropad requires a number or string');
+        }, 'a number or string is required by zeropad');
     });
 
     it('throws when length is NaN', function(){
         assert.throws(function(){
             zp(1, {});
-        }, 'zeropad requires a positive integer for length');
+        }, 'a positive integer for length is required by zeropad');
     });
 
     it('throws on negative length', function(){
         assert.throws(function(){
             zp(1, -1);
-        }, 'zeropad requires a positive integer for length');
+        }, 'a positive integer for length is required by zeropad');
     });
 
     it('length is optional', function(){
