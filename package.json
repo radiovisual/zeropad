@@ -3,6 +3,11 @@
   "version": "1.1.0",
   "license": "MIT",
   "description": "Zeropad your integers with optional n-length padding.",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "index.d.ts.map"
+   ];
   "author": {
     "name": "Michael Wuergler",
     "email": "senjudev@gmail.com",
