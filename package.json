@@ -3,6 +3,12 @@
   "version": "1.1.0",
   "license": "MIT",
   "description": "Zeropad your integers with optional n-length padding.",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "index.d.ts.map"
+   ],
+  "types": "./index.d.ts",
   "author": {
     "name": "Michael Wuergler",
     "email": "senjudev@gmail.com",
@@ -14,9 +20,6 @@
   "scripts": {
     "test": "mocha"
   },
-  "files": [
-    "index.js"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/radiovisual/zeropad.git"
