@@ -8,6 +8,7 @@
     "index.d.ts",
     "index.d.ts.map"
    ],
+  "types": "./index.d.ts",
   "author": {
     "name": "Michael Wuergler",
     "email": "senjudev@gmail.com",
